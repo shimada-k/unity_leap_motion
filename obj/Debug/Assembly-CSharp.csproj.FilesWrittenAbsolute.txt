@@ -1,0 +1,11 @@
+/Users/shimada-k/leaptest2/Temp/bin/Debug/UnityEngine.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/UnityEditor.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/LeapCSharp.NET3.5.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/Mono.Cecil.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/nunit.framework.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/Unity.DataContract.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/shimada-k/leaptest2/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/shimada-k/leaptest2/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/shimada-k/leaptest2/obj/Debug/Assembly-CSharp.dll
+/Users/shimada-k/leaptest2/obj/Debug/Assembly-CSharp.dll.mdb
