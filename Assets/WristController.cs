@@ -11,7 +11,6 @@ public class WristController : MonoBehaviour {
 
     private LMUtils utils = new LMUtils();
 	private InteractionBox interactionBox;
-	public GameObject WristObject;
 	
 	// Use this for initialization
 	void Start () {
@@ -19,7 +18,7 @@ public class WristController : MonoBehaviour {
 		interactionBox = frame.InteractionBox;
 
         HandList hands = frame.Hands;
-        Hand hand = utils.getHandByTag (WristObject.tag, hands);
+        Hand hand = utils.getHandByTag (gameObject.tag, hands);
 
         basisFrame = frame;
         basisHand = hand;
@@ -30,7 +29,7 @@ public class WristController : MonoBehaviour {
 		
 		Frame frame = controller.Frame();
 		HandList hands = frame.Hands;
-        Hand hand = utils.getHandByTag(WristObject.tag, hands);
+        Hand hand = utils.getHandByTag(gameObject.tag, hands);
 	
         if (hand == null) {
             return;
@@ -38,8 +37,7 @@ public class WristController : MonoBehaviour {
 
 		InteractionBox interactionBox = frame.InteractionBox;
 		
-		var unityWrist = WristObject;
-		utils.setVisible(unityWrist, true);
+		utils.setVisible(gameObject, true);
 
         Matrix basis;
 
@@ -55,11 +53,12 @@ public class WristController : MonoBehaviour {
         float angleZ = hand.RotationAngle(basisFrame, basis.zBasis);
 
         // 回転する
-        unityWrist.transform.Rotate(new Vector3(
+        gameObject.transform.Rotate(new Vector3(
                                         LMUtils.rot2Dir(angleX),
                                         LMUtils.rot2Dir(angleY),
                                         -1 * (LMUtils.rot2Dir(angleZ))));
-		unityWrist.transform.position = utils.getScaledUnityPosition(hand.WristPosition, interactionBox);
+		gameObject.transform.position = utils.getScaledUnityPosition(hand.WristPosition,
+                                                                        interactionBox);
         // 次回のために保存
         basisFrame = frame;
         basisHand = hand;

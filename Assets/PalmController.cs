@@ -9,7 +9,6 @@ public class PalmController : MonoBehaviour {
 
     private LMUtils utils = new LMUtils();
 	private InteractionBox interactionBox;
-	public GameObject PalmObject;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +21,7 @@ public class PalmController : MonoBehaviour {
 
 		Frame frame = controller.Frame();
 		HandList hands = frame.Hands;
-        Hand hand = utils.getHandByTag (PalmObject.tag, hands);
+        Hand hand = utils.getHandByTag (gameObject.tag, hands);
 
         if (hand == null) {
             return;
@@ -30,9 +29,8 @@ public class PalmController : MonoBehaviour {
 		
 		InteractionBox interactionBox = frame.InteractionBox;
 
-		var unityPalm = PalmObject;
-		utils.setVisible(unityPalm, true);
+		utils.setVisible(gameObject, true);
 
-		unityPalm.transform.position = utils.getScaledUnityPosition(hand.PalmPosition, interactionBox);
+		gameObject.transform.position = utils.getScaledUnityPosition(hand.PalmPosition, interactionBox);
 	}
 }
