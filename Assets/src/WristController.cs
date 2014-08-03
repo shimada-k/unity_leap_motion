@@ -13,10 +13,6 @@ public class WristController : MonoBehaviour {
     private LMUtils utils = new LMUtils();
 	private InteractionBox interactionBox;
 
-    // LeapMotionオブジェクトの絶対角度を計算する
-    void getAngleAbsolutely(){
-    }
-
 	// Use this for initialization
 	void Start () {
 		Frame frame = controller.Frame();

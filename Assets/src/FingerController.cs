@@ -11,7 +11,11 @@ public class FingerController : MonoBehaviour {
     private LMUtils utils = new LMUtils();
 	private InteractionBox interactionBox;
 	public GameObject[] FingerObjects;
-	
+
+    // 一番手のひらに近い間接同士をline rendererでつなぐ
+    void connectMetacarpals(){
+    }
+
 	void Start()
 	{
 		Frame frame = controller.Frame();
